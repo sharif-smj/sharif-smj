@@ -10,10 +10,9 @@
   <a href="https://github.com/sharif-smj?tab=repositories"><img alt="public repos" src="https://img.shields.io/badge/public%20repos-62-0969da" /></a>
 </p>
 
-<a href="https://github.com/sharif-smj/stats">
-  <img src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/overview.svg#gh-dark-mode-only" alt="SHARIF's GitHub stats overview" />
-  <img src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/overview.svg#gh-light-mode-only" alt="SHARIF's GitHub stats overview" />
-  <img src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/languages.svg#gh-dark-mode-only" alt="SHARIF's most used languages" />
-  <img src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/languages.svg#gh-light-mode-only" alt="SHARIF's most used languages" />
-</a>
-
+<p align="center">
+  <a href="https://github.com/sharif-smj/stats">
+    <img width="49%" src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/overview.svg#gh-dark-mode-only" alt="SHARIF's GitHub stats overview" />
+    <img width="49%" src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/languages.svg#gh-dark-mode-only" alt="SHARIF's most used languages" />
+  </a>
+</p>
