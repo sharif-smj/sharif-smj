@@ -19,8 +19,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Remove language panel
-        run: node scripts/remove-3d-languages.mjs
+      - name: Fetch recent code language data
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/sharif-smj/stats/master/generated/recent-code-languages.json -o recent-code-languages.json || rm -f recent-code-languages.json
+
+      - name: Patch language panel
+        run: node scripts/patch-profile-hero.mjs --json recent-code-languages.json
 
       - name: Commit generated profile
         run: |
