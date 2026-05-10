@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D GitHub contribution calendar" />
+  <img width="100%" src="./profile-3d-contrib/profile-south-season-animate.svg" alt="3D GitHub contribution calendar" />
 </div>
 
 <div align="center">
