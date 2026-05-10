@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=sharif-smj&bg_color=0d1117&color=c9d1d9&line=58a6ff&point=a371f7&area=true&hide_border=true&hide_title=true&radius=8&height=320" alt="GitHub activity graph" />
+  <img width="100%" src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/contributions.svg" alt="GitHub contribution graph" />
 </div>
 
 <div align="center">
