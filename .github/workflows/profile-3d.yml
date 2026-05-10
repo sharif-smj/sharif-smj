@@ -19,6 +19,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
+      - name: Remove language panel
+        run: node scripts/remove-3d-languages.mjs
+
       - name: Commit generated profile
         run: |
           git config user.name "github-actions[bot]"
