@@ -7,10 +7,6 @@
 </div>
 
 <div align="center">
-  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sharif-smj&theme=github_dark" alt="GitHub profile summary" />
-</div>
-
-<div align="center">
   <a href="https://github.com/sharif-smj/stats">
     <img width="100%" src="https://raw.githubusercontent.com/sharif-smj/stats/master/generated/kpis.svg" alt="GitHub KPI dashboard" />
   </a>
