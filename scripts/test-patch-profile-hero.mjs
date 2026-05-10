@@ -15,31 +15,17 @@ async function runPatch(args) {
 
 const tmp = await mkdtemp(join(tmpdir(), "profile-hero-patch-"));
 const svgPath = join(tmp, "hero.svg");
-const jsonPath = join(tmp, "recent-code-languages.json");
 
 await writeFile(
   svgPath,
   '<svg><g id="keep"></g><g transform="translate(40, 520)"><text>HTML</text><text>CSS</text></g><text>end</text></svg>',
 );
-await writeFile(
-  jsonPath,
-  JSON.stringify({
-    generated_at: "2026-05-10T00:00:00Z",
-    window_days: 365,
-    metric: "changed_lines",
-    languages: [
-      { name: "Kotlin", color: "#A97BFF", changes: 50 },
-      { name: "Python", color: "#3572A5", changes: 25 },
-    ],
-    excluded_changes: 100,
-  }),
-);
 
-await runPatch(["--svg", svgPath, "--json", jsonPath]);
+await runPatch(["--svg", svgPath]);
 const patched = await readFile(svgPath, "utf8");
 assert.match(patched, /id="keep"/);
-assert.match(patched, /Kotlin/);
-assert.match(patched, /Python/);
+assert.doesNotMatch(patched, /Kotlin/);
+assert.doesNotMatch(patched, /Python/);
 assert.doesNotMatch(patched, />HTML</);
 assert.doesNotMatch(patched, />CSS</);
 assert.match(patched, /<text>end<\/text>/);
@@ -47,10 +33,10 @@ assert.match(patched, /<text>end<\/text>/);
 const fallbackSvgPath = join(tmp, "fallback.svg");
 await writeFile(
   fallbackSvgPath,
-  '<svg><g id="keep"></g><g transform="translate(40, 520)"><text>HTML</text></g><text>end</text></svg>',
+  '<svg><g id="keep"></g><text>end</text></svg>',
 );
 
-await runPatch(["--svg", fallbackSvgPath, "--json", join(tmp, "missing.json")]);
+await runPatch(["--svg", fallbackSvgPath]);
 const fallback = await readFile(fallbackSvgPath, "utf8");
 assert.match(fallback, /id="keep"/);
 assert.doesNotMatch(fallback, />HTML</);
